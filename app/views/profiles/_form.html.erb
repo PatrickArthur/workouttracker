@@ -1,0 +1,74 @@
+<%= bootstrap_form_for @profile do |f| %>
+
+  <% if @profile.errors.any? %>
+    <ul>
+      <% @profile.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+    </ul>
+  <% end %>
+
+  <div>
+
+    <%= f.text_field :first_name %>
+  </div>
+
+  <div>
+
+    <%= f.text_field :last_name %>
+  </div>
+
+  <div>
+
+    <%= f.text_field :city %>
+  </div>
+
+  <div>
+
+    <%= f.text_field :state %>
+  </div>
+
+  <div>
+
+    <%= f.number_field :age %>
+  </div>
+
+  <div>
+    <%= f.select :level, [ "Male", "Female"],:prompt => "Select Gender" %>
+  </div>
+
+  <div>
+
+    <%= f.number_field :weight %>
+  </div>
+
+  <div>
+
+    <%= f.number_field :height %>
+  </div>
+
+  <div>
+
+    <%= f.number_field :waist %>
+  </div>
+
+  <div>
+
+    <%= f.number_field :wrist %>
+  </div>
+
+  <div>
+
+    <%= f.number_field :neck %>
+  </div>
+
+  <div>
+    <%= f.select :level, [ "No Activity", "Moderately Active", "Athletic"],:prompt => "Select a fitness level" %>
+  </div>
+
+
+</br>
+
+   <%= f.submit 'Submit' %>
+<% end %>
+<hr>
