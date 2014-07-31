@@ -105,7 +105,7 @@ class ProfilesController < ApplicationController
     def profile_params
       params.require(:profile).permit(:first_name,:last_name,
         :city,:state,:gender,:age,:weight,:height,:waist,
-        :neck,:hip,:level,:gender,workouts_attributes: [:id, :workouts,:sets,:reprange,
+        :neck,:hip,:level,:gendeworkouts_attributes: [:id, :workouts,:sets,:reprange,
         :duration,:lifted],diets_attributes: [:id, :workouts,:food,:food_portion,:beverage,
         :beverage_qty,:calories])
     end
